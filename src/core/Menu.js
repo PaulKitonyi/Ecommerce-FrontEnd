@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import {Link, withRouter} from 'react-router-dom';
-import {signout, isAuthenticated, authenticate} from '../auth';
+import {signout, isAuthenticated} from '../auth';
 
 const isActive = (history, path) => {
     if(history.location.pathname === path){
@@ -14,6 +14,9 @@ const Menu = ({ history }) => (
         <ul className="nav nav-tabs bg-primary">
             <li className="nav-item">
                 <Link className="nav-link" style={isActive(history, '/')} to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+                <Link className="nav-link" style={isActive(history, '/dashboard')} to="/dashboard">DashBoard</Link>
             </li>
             {!isAuthenticated() && (
                 <Fragment>
