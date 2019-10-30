@@ -9,7 +9,6 @@ import Menu from './core/Menu';
 const Routes = () => {
     return (
         <BrowserRouter>
-            <Menu/>
             <Switch>
             <Route path="/" exact component={Home}/>
                 <Route path="/signin" exact component={Signin}/>
