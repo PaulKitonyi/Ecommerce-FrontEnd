@@ -35,7 +35,7 @@ const Product = (props) => {
         <Layout title={product.name} description={product && product.description && product.description.substring(0, 100)} className="container-fluid">
             <div className="row">
                 <div className="col-8">
-                    {product && product.description && <Card product={product} showViewProductButton={false} />}
+                    {product && product.description && <Card  key = {product._id} product={product} showViewProductButton={false} />}
                 </div>
                 <div className="col-4">
                     <h4>Related Products</h4>
