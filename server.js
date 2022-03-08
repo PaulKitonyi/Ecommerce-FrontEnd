@@ -10,7 +10,7 @@ app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-const PORT = 7074;
+const PORT = 8071;
 
 app.listen(PORT, () => {
   console.log(`App is running on port ${PORT}`);
